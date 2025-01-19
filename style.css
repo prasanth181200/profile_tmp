@@ -48,6 +48,7 @@ body{
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
+  z-index: 1;
 }
 #sidebar.close{
   padding: 5px;
@@ -197,6 +198,11 @@ main p{
       border-radius: 0;
       justify-content: center;
     }
+    /* .dropdown-btn a{
+      padding: 0;
+      margin: 0;
+      justify-content: left;
+    } */
 
     ul li span, ul li:first-child, .dropdown-btn svg:last-child{
       display: none;
@@ -230,6 +236,14 @@ main p{
   }
 }
 
+iframe{
+  display: block;
+  width: -webkit-fill-available;
+}
+svg{
+  fill: var(--text-clr);
+}
+
 /* -----theme switch----- */
 
 
@@ -249,6 +263,66 @@ main p{
 .darkmode #theme-switch svg:last-child{
   display: none;
 }
+/* --------- cards ---------- */
+.card{
+  margin: 20px auto;
+  padding: 1em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  /* align-self: self-start; */
+}
+.card i{
+  font-size: 3em;
+}
+/* .cards{
+  align-items: flex-start;
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 2;
+} */
+.card-container{
+  flex-wrap: wrap;
+  display: flex;
+  /* align-items: flex-start; */
+}
+
+/* @property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+} */
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color:  var(--accent-clr);
+  /* background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545); */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+/* @keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+} */
+/* ---------------------------- */
 
 /* -----siva----- */
 
@@ -279,7 +353,7 @@ main p{
   background: var(--bg-color);
 }
 .about-img img{
-  width:35vw;
+  width:20vw;
 }
 @keyframes typing{
   0%{

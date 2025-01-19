@@ -31,17 +31,16 @@
       </li>
       <li>
         <button onclick=toggleSubMenu(this) class="dropdown-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-313q10-3 19.5-5t20.5-2h40v-480h-40q-17 0-28.5 11.5T200-760v447Zm40 233q-50 0-85-35t-35-85v-560q0-50 35-85t85-35h280v80H360v480h240v-120h80v200H240q-17 0-28.5 11.5T200-200q0 17 11.5 28.5T240-160h520v-320h80v400H240Zm-40-233v-487 487Zm500-167q0-92 64-156t156-64q-92 0-156-64t-64-156q0 92-64 156t-156 64q92 0 156 64t64 156Z"/></svg>
-          <a href="skills.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-313q10-3 19.5-5t20.5-2h40v-480h-40q-17 0-28.5 11.5T200-760v447Zm40 233q-50 0-85-35t-35-85v-560q0-50 35-85t85-35h280v80H360v480h240v-120h80v200H240q-17 0-28.5 11.5T200-200q0 17 11.5 28.5T240-160h520v-320h80v400H240Zm-40-233v-487 487Zm500-167q0-92 64-156t156-64q-92 0-156-64t-64-156q0 92-64 156t-156 64q92 0 156 64t64 156Z"/></svg>          <a href="skills.html">
             <span>Skils</span>
           </a>
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="skills.html#prog-skills">Programming</a></li>
-            <li><a href="skills.html#tech-skills">Technical</a></li>
-            <li><a href="skills.html#hobbis">Others</a></li>
+            <li><a href="#prog-skills">Programming</a></li>
+            <li><a href="#tech-skills">Technical</a></li>
+            <li><a href="#hobbis">Others</a></li>
           </div>
         </ul>
       </li>
@@ -85,17 +84,80 @@
     </ul>
   </nav>
   <main>
-    <div class="container">
-      <h2>Dashboard</h2><br>
-      <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3924768" style='border:none;'></iframe>
-      <p>Lorem, ipsum dolor sit ame repellendus excepturi enim dolor deleniti adipisci consectetur doloremque, unde maiores odit sapiente. Atque ab necessitatibus laboriosam consequatur eius similique, ex dolorum eum eaque sequi id veritatis voluptates perspiciatis, cupiditate pariatur.</p>
+    <div class="container" >
+      <span style="display: flex;">
+        <svg style="margin-top: 1rem;margin-right: .2rem;" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M200-313q10-3 19.5-5t20.5-2h40v-480h-40q-17 0-28.5 11.5T200-760v447Zm40 233q-50 0-85-35t-35-85v-560q0-50 35-85t85-35h280v80H360v480h240v-120h80v200H240q-17 0-28.5 11.5T200-200q0 17 11.5 28.5T240-160h520v-320h80v400H240Zm-40-233v-487 487Zm500-167q0-92 64-156t156-64q-92 0-156-64t-64-156q0 92-64 156t-156 64q92 0 156 64t64 156Z"/></svg>
+        <h2>Skills </h2>
+      </span>
+      <p>&emsp;&emsp;&emsp; A skill is the learned ability to act with determined results with good execution often within a given amount of time, energy, or both. Skills can often be divided into domain-general and domain-specific skills. Proficiency, facility, or dexterity that is acquired or developed through training or experience.</p>
+      <p>with that, Given below are my skills in programming and other technical areas.</p>
+    </div>
+
+    <div class="container cards">
+      <h2 id="prog-skills">Programming Skills</h2><br>
+      <div class="card-container">
+        <div class="card">
+          <i class="fa-brands fa-python"></i>
+          <h1>Python</h1>
+          <p>Python is a high-level, versatile programming language known for its simplicity and readability, making it ideal for beginners and professionals alike. Python supports multiple programming paradigms. </p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-linux"></i>
+          <h1>Bash Script</h1>
+          <p>Bash is an interactive command interpreter and command programming language developed for UNIX-like operating systems.</p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-java"></i>
+          <h1>Java</h1>
+          <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-database"></i>
+          <h1>SQL</h1>
+          <p>SQL (Structured Query Language) is a domain-specific language used to manage and manipulate relational databases. It allows users to perform various operations such as creating, reading, updating, and deleting data.</p>
+        </div>
+      </div>
+      <div class="card">
+        <i style="padding-bottom: 5px;" class="fa-brands fa-html5"></i><span style="padding: 5px 3px; margin-bottom: 5px;"></span><i class="fa-brands fa-css3-alt"></i><span style="padding: 5px 3px; margin-bottom: 5px;"></span><i class="fa-brands fa-js"></i>
+        <h1>Web Development</h1>
+        <p>Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.</p>
+    </div>
+    </div>
+
+    <div class="container cards">
+      <h2 id="tech-skills">Technical Skills</h2><br>
+      <div class="card-container">
+        <div class="card">
+          <i class="fa-brands fa-linux"></i>
+          <h1>Linux</h1>
+          <p>Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.</p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-docker"></i>
+          <h1>Docker</h1>
+          <p>Open-source software for deploying and running of containerized applications. Docker is an open platform for developing, shipping, and running applications using containers. Docker is more convenient than a full-blown virtual machine.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-server"></i>
+          <h1>Nginx</h1>
+          <p>nginx ("engine x") is an HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container cards">
+      <h2 id="hobbis">Other Skills & Hobbis</h2><br>
+      <div class="card-container">
+        <div class="card">
+          <!-- <i class="fa-brands fa-linux"></i>
+          <h1>Linux</h1>
+          <p>Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.</p> -->
+        </div>
+      </div>
     </div>
 
 
-    <div class="container">
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repudiandae labore veniam reprehenderit voluptatum, laboriosam perferendis fuga, dolore quam quas nostrum totam sunt esse expedita. Vero distinctio omnis accusantium. Quisquam ullam saepe cupiditate magni numquam totam perspiciatis error velit, debitis veniam labore possimus aut sunt, reiciendis natus. Impedit provident voluptatum nulla fuga error a magnam, corporis natus aperiam fugit quod perferendis quos quaerat, numquam sequi doloribus tenetur dolorem voluptate deleniti, odio minus. Deserunt eius quasi odit voluptas unde voluptatum dicta cumque exercitationem soluta beatae porro distinctio, delectus officiis, nobis officia ullam necessitatibus, rem natus corrupti nam! Est, nihil molestias fugiat sed quae enim commodi expedita soluta tempore molestiae fuga adipisci rem esse voluptates quos, ut quasi sunt ad a perspiciatis ducimus maxime animi. Adipisci officia doloribus magni alias maiores ab quo, eos mollitia sint esse. Labore odio, architecto nihil quaerat soluta blanditiis impedit laudantium esse officiis dolorum dolore libero, id sequi minima incidunt eum facilis itaque distinctio. Voluptas doloremque minus reiciendis ex beatae laudantium cum sequi repellat blanditiis molestiae. Cumque, libero nulla! Sit, quisquam magni dolore consectetur odio impedit adipisci voluptas ab, laboriosam autem nihil nam est ipsa excepturi obcaecati eos neque! Omnis similique qui veritatis. Repellat magni dolorem, facilis eaque, harum molestias, delectus est adipisci laudantium velit optio blanditiis debitis? Tenetur totam maiores animi officiis eligendi expedita nemo corrupti distinctio. Cum libero soluta beatae doloribus sit, repellendus nobis vel obcaecati velit dolorem voluptate magnam inventore quas pariatur quam reprehenderit molestiae hic sunt dicta illo amet quis magni accusamus sequi? Vel quis, dolores iusto suscipit excepturi laboriosam repellat consectetur! Maiores deserunt, pariatur nesciunt consequuntur recusandae minima assumenda consequatur inventore natus debitis illo velit voluptatum necessitatibus qui aspernatur illum impedit magni dignissimos ea, molestias tempora corporis, asperiores iusto possimus. Libero expedita aspernatur officia totam dolorum culpa, minus, alias adipisci eligendi suscipit voluptates, magnam laudantium? Inventore cupiditate perspiciatis mollitia excepturi, voluptatibus ducimus expedita provident. Dicta, odit. Odio, qui repudiandae! Maiores dignissimos, magnam deleniti reprehenderit ex cum ea eveniet placeat quae, ad at perspiciatis nobis corporis doloribus voluptatem nulla aliquam sunt accusamus facere quaerat necessitatibus ipsa! Nam quisquam dicta minima commodi nostrum. Exercitationem necessitatibus optio cumque voluptate modi amet consequuntur similique ex inventore explicabo doloremque esse sed sequi nemo rem, nostrum ullam. Totam repellat ut ipsa quisquam rem, nulla, suscipit debitis atque earum quis voluptates quaerat exercitationem architecto repellendus placeat, tenetur incidunt distinctio consectetur reiciendis minima officiis aliquam? Ipsum sequi hic officia iste a. Blanditiis, dicta! Eveniet molestias ut natus odio fugiat cum necessitatibus, architecto, quo a quisquam autem porro explicabo ipsam, nostrum deserunt possimus expedita eum est corporis quibusdam cupiditate! Fugiat, quaerat saepe. Harum modi eligendi beatae alias fugiat. Nostrum cum nisi saepe dicta iste cupiditate, deserunt omnis, doloremque a distinctio eum rem adipisci ab? Sapiente, dicta ipsam blanditiis earum omnis necessitatibus temporibus, excepturi accusantium delectus quo quod iusto ad aliquam nemo ducimus ab nobis inventore sequi veritatis? Nulla, dolorem. Voluptas, obcaecati non facilis repellendus ratione officiis veritatis, modi culpa rerum placeat voluptatum quia ex? Officia quos dolorum repellat deserunt voluptas praesentium.</p>
-    </div>
     <div class="container foot">
       <section >
         <footer class="footer">
