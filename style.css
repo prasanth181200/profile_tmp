@@ -8,6 +8,7 @@
   --accent-clr: #5e63ff;
   --secondary-text-clr: #8e8e91;
   --main-clr: #f9004d;
+  --social-clr: #d8d7d7b0;
 }
 .darkmode{
   --base-clr: #11121a;
@@ -17,6 +18,7 @@
   --accent-clr: #5e63ff;
   --secondary-text-clr: #d7d8db;
   --main-clr: #f9004d;
+  --social-clr: #ffffffc5;
 }
 *{
   margin: 0;
@@ -272,6 +274,7 @@ svg{
   text-align: center;
   border-radius: 10px;
   position: relative;
+  box-shadow:0px 0px 5px 5px var(--accent-clr);
   /* align-self: self-start; */
 }
 .card i{
@@ -289,39 +292,70 @@ svg{
   /* align-items: flex-start; */
 }
 
-/* @property --angle{
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-} */
+/* -------------------social hovers----------------------- */
 
-.card::after, .card::before{
+.socials-container{
+  display: flex;
+  gap: 20px;
+}
+.socials-container a{
+  background-color: var(--social-clr);
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.socials-container a svg{
+  fill: black;
+  height: 32px;
+}
+.socials-container svg:hover{
+  fill: white;
+}
+.socials-container a::before{
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white;
+}
+.socials-container a::after{
   content: '';
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color:  var(--accent-clr);
-  /* background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545); */
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 3px;
-  border-radius: 10px;
-  animation: 3s spin linear infinite;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
 }
-.card::before{
-  filter: blur(1.5rem);
-  opacity: 0.5;
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
 }
-/* @keyframes spin{
-  from{
-    --angle: 0deg;
-  }
-  to{
-    --angle: 360deg;
-  }
-} */
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
+
+/* ---------------------------- */
 /* ---------------------------- */
 
 /* -----siva----- */
